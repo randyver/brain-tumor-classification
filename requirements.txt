@@ -1,0 +1,10 @@
+torch
+torchvision
+matplotlib
+tqdm
+gdown
+zipfile
+os
+sklearn
+seaborn
+numpy

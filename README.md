@@ -3,7 +3,7 @@
 ## Description
 
 <div align="center">
-    <img src="brain-tumor.png" alt="brain tumor">
+    <img src="assets/brain-tumor.png" alt="brain tumor">
 </div>
 
 Brain tumors are abnormal growths of cells in the brain. They are typically categorized into three types:
@@ -81,5 +81,5 @@ The model achieves the following performance metrics:
 Below is an example of the model's prediction on a sample image from testing dataset:
 
 <div align="center">
-    <img src="test-result.png" alt="test result">
+    <img src="assets/test-result.png" alt="test result">
 </div>

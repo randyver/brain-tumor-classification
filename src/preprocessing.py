@@ -2,6 +2,7 @@ from torch.utils.data import DataLoader, random_split
 from torchvision import transforms
 from .config import BATCH_SIZE
 from torchvision import datasets
+import os
 
 # Data augmentation
 transform = transforms.Compose([
@@ -11,9 +12,13 @@ transform = transforms.Compose([
     transforms.ToTensor(), 
 ])
 
-# Create instances of the custom dataset
-train_dataset = datasets.ImageFolder("../dataset/Training", transform=transform)
-test_dataset = datasets.ImageFolder("../dataset/Testing", transform=transform)
+# Load datasets
+base_dir = os.path.dirname(os.path.abspath(__file__))
+train_path = os.path.join(base_dir, "../dataset/Training")
+test_path = os.path.join(base_dir, "../dataset/Testing")
+
+train_dataset = datasets.ImageFolder(train_path, transform=transform)
+test_dataset = datasets.ImageFolder(test_path, transform=transform)
 
 # Split training data into train and validation sets
 train_size = int(0.8 * len(train_dataset))
